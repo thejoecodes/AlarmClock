@@ -19,6 +19,7 @@ def alarm(set_timer):
         if now == set_timer:
             print("Wakey Wakey! Its time to chase your dreams!")
         print("\a")
+        #winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
         break
 
 def actual_time():
