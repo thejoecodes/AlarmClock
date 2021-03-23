@@ -2,11 +2,9 @@
 #importing required libraries
 
 from tkinter import *
+from playsound import playsound
 import datetime
 import time
-#winsound works only for windows operating system, for linux sound has to be hard-coded into /dev/audio folder
-#for mac-os, I am still doing my research, though I lack the platform to experiment 😊
-#import winsound
 
 def alarm(set_timer):
     while True:
@@ -18,8 +16,7 @@ def alarm(set_timer):
         print(now)
         if now == set_timer:
             print("Wakey Wakey! Its time to chase your dreams!")
-        print("\a")
-        #winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
+        playsound("path/sound.mp3")#Replace sound.mp3 with the alarm sound you want to play
         break
 
 def actual_time():
